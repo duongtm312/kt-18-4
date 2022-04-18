@@ -14,14 +14,10 @@
   function test(){
       count=0;
   while (count<20){
-      if (num%2==0){
+      if (num%2==0&&num%3==0){
          sum=sum+num+"<br>";
           num++;
           count++
-      }else if (num%3==0){
-          sum=sum+num+"<br>";
-          num++;
-          count++;
       }else {
           num++
       }
