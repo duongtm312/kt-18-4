@@ -10,22 +10,26 @@
 <input type="button" onclick="test()" value="Check">
 <p id="display"></p>
 <script>
-    let year= 0;
+    let year = 0;
     let check = true;
-    let  century
-    function test(){
-        year=Number(document.getElementById("year").value);
-        century = Number(parseInt(year/100));
-        check=century%100==0;
-if (year<=99){
-    document.getElementById("display").innerHTML="Thế kỷ :"+ 1;
-}else  if (check){
-    document.getElementById("display").innerHTML="Thế kỷ :"+  century;
-}else {
+    let century
+    let display = ""
 
-    document.getElementById("display").innerHTML="Thế kỷ :"+  (century+1);
-}}
+    function test() {
+        year = Number(document.getElementById("year").value);
+        century = Number(parseInt(year / 100));
+        check = century % 100 == 0;
+        if (year <= 99) {
+            display = "Thế kỷ :" + 1
+        } else if (check) {
+            display = "Thế kỷ :" + century;
+        } else {
 
+            display == "Thế kỷ :" + (century + 1);
+        }
+    }
+
+    document.getElementById("display").innerHTML = display
 </script>
 </body>
 </html>

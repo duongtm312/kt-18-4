@@ -12,13 +12,14 @@
 
     let num = 0;
     let check = true;
+    let display=""
 
     function test() {
         num = document.getElementById("num").value;
         check = true;
 
         if (num%2 == 0) {
-            document.getElementById("display").innerHTML=" Chia hết cho 2";
+            display=" Chia hết cho 2";
         } else {
             for (let i = 2; i <= (num / 2); i++) {
                 if (num % i==0) {
@@ -28,11 +29,12 @@
 
             }
             if (check) {
-                document.getElementById("display").innerHTML=" Là số nguyên tố";
+                display=" Là số nguyên tố";
             } else {
-                document.getElementById("display").innerHTML=" Không là số nguyên tố";
+                display=" Không là số nguyên tố";
             }
         }
+        document.getElementById("display").innerHTML=display
     }
 </script>
 </body>
