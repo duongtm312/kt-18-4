@@ -18,12 +18,12 @@
     let b = 0;
     let c = 0;
     let aa = 0;
-    let bb =0;
+    let bb = 0;
     let cc = 0;
     let check = 0;
     let check2 = 0;
     let check3 = 0;
-    let kq=""
+    let kq = ""
 
     function test() {
         a = Number(document.getElementById("num1").value)
@@ -38,24 +38,27 @@
         check3 = aa + cc == bb;
 
         if (a == 0 || b == 0 || c == 0) {
-            kq ="Không là tam giác";
+            kq = "Không là tam giác";
         } else if (a + b > c && a + c > b && b + c > a) {
             if (a == b && b == c) {
-                kq="là tam giác đều";;
+                kq = "là tam giác đều";
+                ;
             } else if (a == b || a == c || b == c) {
                 if (check || check2 || check3) {
-                   kq="Là tam giác vuông cân";
+                    kq = "Là tam giác vuông cân";
                 } else {
-                    kq="Là tam giác cân";
+                    kq = "Là tam giác cân";
                 }
 
             } else if (check || check2 || check3) {
-                kq="Là tam giác vuông";
+                kq = "Là tam giác vuông";
             } else {
-                kq="Là tam giác";
-            }
+                kq = "Là tam giác";
+            }}
+        else {
+            kq="Không là tam giác"
         }
-        document.getElementById("display").innerHTML=kq
+        document.getElementById("display").innerHTML = kq
     }
 </script>
 </body>
