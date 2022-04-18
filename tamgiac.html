@@ -23,11 +23,12 @@
     let check = 0;
     let check2 = 0;
     let check3 = 0;
+    let kq=""
 
     function test() {
-        a = document.getElementById("num1").value
-        b = document.getElementById("num2").value
-        c = document.getElementById("num3").value
+        a = Number(document.getElementById("num1").value)
+        b = Number(document.getElementById("num2").value)
+        c = Number(document.getElementById("num3").value)
 
         aa = a * a;
         bb = b * b;
@@ -37,23 +38,24 @@
         check3 = aa + cc == bb;
 
         if (a == 0 || b == 0 || c == 0) {
-            document.getElementById("display").innerHTML="Không là tam giác";
+            kq ="Không là tam giác";
         } else if (a + b > c && a + c > b && b + c > a) {
             if (a == b && b == c) {
-                document.getElementById("display").innerHTML="là tam giác đều";;
+                kq="là tam giác đều";;
             } else if (a == b || a == c || b == c) {
                 if (check || check2 || check3) {
-                    document.getElementById("display").innerHTML="Là tam giác vuông cân";
+                   kq="Là tam giác vuông cân";
                 } else {
-                    document.getElementById("display").innerHTML="Là tam giác cân";
+                    kq="Là tam giác cân";
                 }
 
             } else if (check || check2 || check3) {
-                document.getElementById("display").innerHTML="Là tam giác vuông";
+                kq="Là tam giác vuông";
             } else {
-                document.getElementById("display").innerHTML="Là tam giác";
+                kq="Là tam giác";
             }
         }
+        document.getElementById("display").innerHTML=kq
     }
 </script>
 </body>
