@@ -12,24 +12,23 @@
 <script>
     let year = 0;
     let check = true;
-    let century
+    let century=0;
     let display = ""
 
     function test() {
-        year = Number(document.getElementById("year").value);
+        year = Number(document.getElementById("year").value)
         century = Number(parseInt(year / 100));
-        check = century % 100 == 0;
-        if (year <= 99) {
-            display = "Thế kỷ :" + 1
-        } else if (check) {
+        check = year % 100 == 0;
+        if (check) {
             display = "Thế kỷ :" + century;
         } else {
 
-            display == "Thế kỷ :" + (century + 1);
+            display = "Thế kỷ :" + (century + 1);
         }
+        document.getElementById("display").innerHTML = display
     }
 
-    document.getElementById("display").innerHTML = display
+
 </script>
 </body>
 </html>
