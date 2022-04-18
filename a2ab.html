@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="num1">Nhập a
+<br>
+<input type="number" id="num2">Nhập b
+<br>
+<input type="button" onclick="test()" value="Check">
+<p id="display"></p>
+<script>
+    let a = 0;
+    let b = 0;
+    let a2 = 0;
+    let ab =0;
+
+    function test() {
+        a=document.getElementById("num1").value
+        b=document.getElementById("num2").value
+
+        a2 = Math.pow(a, 2);
+        ab = Math.pow(a, b);
+        document.getElementById("display").innerHTML="a2="+a2+"<br>"+"a*b="+ab
+    }
+</script>
+</body>
+</html>

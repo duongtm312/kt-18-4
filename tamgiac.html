@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<input type="number" id="num1">Nhập a
+<br>
+<input type="number" id="num2">Nhập b
+<br>
+<input type="number" id="num3">Nhập c
+<br>
+<input type="button" onclick="test()" value="Check">
+<p id="display"></p>
+<body>
+<script>
+    let a = 0;
+    let b = 0;
+    let c = 0;
+    let aa = 0;
+    let bb =0;
+    let cc = 0;
+    let check = 0;
+    let check2 = 0;
+    let check3 = 0;
+
+    function test() {
+        a = document.getElementById("num1").value
+        b = document.getElementById("num2").value
+        c = document.getElementById("num3").value
+
+        aa = a * a;
+        bb = b * b;
+        cc = c * c;
+        check = aa + bb == cc;
+        check2 = cc + bb == aa;
+        check3 = aa + cc == bb;
+
+        if (a == 0 || b == 0 || c == 0) {
+            document.getElementById("display").innerHTML="Không là tam giác";
+        } else if (a + b > c && a + c > b && b + c > a) {
+            if (a == b && b == c) {
+                document.getElementById("display").innerHTML="là tam giác đều";;
+            } else if (a == b || a == c || b == c) {
+                if (check || check2 || check3) {
+                    document.getElementById("display").innerHTML="Là tam giác vuông cân";
+                } else {
+                    document.getElementById("display").innerHTML="Là tam giác cân";
+                }
+
+            } else if (check || check2 || check3) {
+                document.getElementById("display").innerHTML="Là tam giác vuông";
+            } else {
+                document.getElementById("display").innerHTML="Là tam giác";
+            }
+        }
+    }
+</script>
+</body>
+</html>

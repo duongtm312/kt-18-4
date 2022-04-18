@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="num1">Nhập a
+<br>
+<input type="number" id="num2">Nhập b
+<br>
+<input type="button" onclick="test()" value="Check">
+<p id="display"></p>
+<script>
+  let a = 0;
+  let b = 0;
+  let c = 0;
+  let sum = 0;
+  function test() {
+      a=Number(document.getElementById("num1").value);
+      b=Number(document.getElementById("num2").value);
+      c=a;
+      for (; a <= b; a++) {
+          sum = sum + a;
+      }
+      document.getElementById("display").innerText="Tổng từ:" + c + "đến" + b + "là " + sum
+
+  }
+</script>
+</body>
+</html>

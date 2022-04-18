@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="test()" value="Display">
+<p id="display"></p>
+<script>
+  let num = 19;
+  let count = 0;
+  let sum =""
+  function test(){
+      count=0;
+  while (count<20){
+      if (num%2==0){
+         sum=sum+num+"<br>";
+          num++;
+          count++
+      }else if (num%3==0){
+          sum=sum+num+"<br>";
+          num++;
+          count++;
+      }else {
+          num++
+      }
+  }
+  document.getElementById("display").innerHTML=sum}
+</script>
+</body>
+</html>

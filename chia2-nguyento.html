@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="num">
+<input type="button" onclick="test()" value="Check">
+<h3 id="display"> </h3>
+<script>
+
+    let num = 0;
+    let check = true;
+
+    function test() {
+        num = document.getElementById("num").value;
+        check = true;
+
+        if (num%2 == 0) {
+            document.getElementById("display").innerHTML=" Chia hết cho 2";
+        } else {
+            for (let i = 2; i <= (num / 2); i++) {
+                if (num % i==0) {
+                    check = false;
+                    break;
+                }
+
+            }
+            if (check) {
+                document.getElementById("display").innerHTML=" Là số nguyên tố";
+            } else {
+                document.getElementById("display").innerHTML=" Không là số nguyên tố";
+            }
+        }
+    }
+</script>
+</body>
+</html>
